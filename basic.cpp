@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-
+//ctl
     if (argc == 2 && string(argv[1]) == "--help")
     {
         cout << "gufi --help" << endl;
