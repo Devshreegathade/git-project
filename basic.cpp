@@ -78,7 +78,6 @@ int main(int argc, char *argv[])
             i += 2;
         }
 
-        /* ---- Build args for gufi_find ---- */
         char *args[argc + 1];
 
         args[0] = (char *)"gufi_find";
@@ -96,7 +95,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    /* ================= LS ================= */
     else if (cmnd == "ls")
     {
         execvp("ls", &argv[1]);
@@ -104,7 +102,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    /* ================= DU ================= */
     else if (cmnd == "du")
     {
         execvp("du", &argv[1]);
@@ -112,15 +109,13 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    /* ================= STAT ================= */
     else if (cmnd == "stat")
     {
         execvp("stat", &argv[1]);
         perror("execvp failed");
         return 1;
     }
-
-    /* ================= INVALID ================= */
+    
     else
     {
         cerr << "Error: Invalid command\n";
